@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="https://cdn.pixabay.com/photo/2015/03/28/10/21/diet-695723_960_720.jpg" />
+  <meta
+      name="description"
+      content="Calories Counter, created using functional programming"
+    />
+    <meta name="robots" content="index,follow"/>
+    <meta name="keywords" content="JavaScript, DOM, functional programming, closure, currying, Higher Order Functions, compose">
+    <meta name="author" content="Guadalupe Monge Barale">
+    
+    <meta name="image" content="./img/calories-counter.png" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@guaditaemprende" />
+    <meta name="twitter:creator" content="@guaditaemprende" />
+    <meta name="twitter:image" content="./img/calories-counter.png" />
+    <meta property="og:url" content="https://github.com/GuadaMongeBarale/functional" />
+    <meta property="og:title" content="Calories Counter, created using functional programming" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Calories Counter</title>
+</head>
+
+<body>
+  <img src="./img/calories-counter.png" alt="">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-9">
+        <div class="card my-5 bg-light text-center">
+          <div class="card-header">
+            <h1>Calories Counter</h1>
+          </div>
+          <div class="card-body">
+            <table class="table table-hover table-responsive-xl">
+              <thead>
+                <tr>
+                  <th scope="col">Description</th>
+                  <th scope="col">QTY</th>
+                  <th scope="col">Calories</th>
+                  <th scope="col">Carbs</th>
+                  <th scope="col">Protein</th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+              <thead class="thead-light">
+                <tr>
+                  <th>Totals</th>
+                  <th id="tQTY" >0</th>
+                  <th id="tCalories" >0</th>
+                  <th id="tCarbs" >0</th>
+                  <th id="tProtein" >0</th>
+                  <th ></th>
+                  <th ></th>
+                  <th></th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="card-footer" >
+            <div class="row mb-2" >
+              <div class="col">
+                  <input type="text" class="form-control mb-2 mr-sm-2" id="description" placeholder="Description"  />
+              </div>
+              <div class="col">
+                  <input type="number" min="0" class="form-control mb-2 mr-sm-2" id="qty" placeholder="QTY"  />
+              </div>
+              <div class="col">
+                <input type="number" min="0" class="form-control mb-2 mr-sm-2" id="calories" placeholder="Calories"  />
+              </div>
+              <div class="col">
+                  <input type="number" min="0" class="form-control mb-2 mr-sm-2" id="carbs" placeholder="Carbs" />
+              </div>
+              <div class="col">
+                  <input type="number" min="0" class="form-control mb-2 mr-sm-2" id="protein" placeholder="Protein" />
+              </div>
+              <div class="col">
+                  <button 
+                  id="btn"
+                  class="btn btn-primary mb-2" 
+                  onclick="validateInputs()" 
+                  title="You have to write the values ​​per consumed unit
+                  Example: If you ate 3 slices of bread,
+                  Description = slices of bread
+                  QTY = 3
+                  Calories = 67
+                  Carbs = 11
+                  Protein = 8.5"
+                  >
+                    <i  id="icon" class="fas fa-plus"></i>
+                  </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
